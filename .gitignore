@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Original Directory
+lib
+<<<<<<< HEAD
+=======
+.idea
+>>>>>>> dcb3750... first commit. Make skeleton for package. Make init package script.
