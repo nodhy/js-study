@@ -39,3 +39,4 @@ jspm_packages
 # Original Directory
 lib
 .idea
+.DS_Store
