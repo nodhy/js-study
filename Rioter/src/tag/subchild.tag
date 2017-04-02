@@ -1,5 +1,5 @@
-<subcontent>
-  <h2>Subcontent Tag.</h2>
+<subchild>
+  <h2>SubChild Tag.</h2>
   <script>
     this.on('mount', ()=>{
       console.log('subcontent mount');
@@ -8,4 +8,4 @@
       console.log('subcontent unmount');
     });
   </script>
-</subcontent>
+</subchild>

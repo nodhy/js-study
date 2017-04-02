@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "lib",
+    "noImplicitAny": false,
+    "removeComments": true
+  },
+  "file": [
+    "typings/index.d.ts"
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,37 +1,27 @@
 {
-  "name": "Rioter",
+  "name": "Adapter",
   "version": "1.0.0",
   "description": "Adapter Design Pattern by js",
   "main": "lib/index.js",
-  "dependencies": {
-    "riot": "^3.4.0",
-    "riot-route": "^3.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-eslint": "^7.2.0",
-    "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
-    "babel-preset-es2015-riot": "^1.1.0",
     "babel-preset-power-assert": "^1.0.0",
     "babel-register": "^6.24.0",
-    "chokidar-cli": "^1.2.0",
     "eslint": "^3.12.0",
     "eslint-config-google": "^0.7.1",
-    "http-server": "^0.9.0",
     "mocha": "^3.2.0",
     "power-assert": "^1.4.2",
-    "riotjs-loader": "^4.0.0",
-    "webpack": "^1.5.3"
+    "should": "^11.2.1"
   },
   "scripts": {
-    "build": "npm run lint && npm run test && webpack",
-    "dev": "webpack",
-    "watch": "chokidar 'src/**' 'index.html' -c 'npm run dev'",
+    "build": "npm run lint && npm run test && NODE_ENV=production babel src --out-dir lib --source-maps inline",
+    "watch": "babel src --out-dir lib --watch --source-maps inline",
     "start": "node lib/index.js",
     "lint": "eslint -c google -c eslint.config.js --fix index.js src/**/*.js",
-    "test": "mocha --recursive test/",
-    "serve": "http-server"
+    "test": "mocha --recursive test/"
   },
   "keywords": [],
   "author": "nodhy",

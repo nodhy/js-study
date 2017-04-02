@@ -57,10 +57,13 @@ function repPkgName {
 }
 
 function npmInstall {
-  pkgdir="${1}"
-  cd "${pkgdir}"
   echo "npmパッケージをインストールします。"
   npm i
+}
+
+function typingsInstall {
+  echo "typingsをインストールします。"
+  $(npm bin)/typings install
 }
 
 echo "パッケージ生成処理を開始します。"
@@ -81,7 +84,12 @@ copyFile "${pkgdir}"
 # package.jsonのパッケージ名を修正
 repPkgName "${pkgdir}" "${pkg_name}"
 
+cd "${pkgdir}"
+
 # npm install
-npmInstall "${pkgdir}"
+npmInstall
+
+# typings install
+typingsInstall
 
 echo "パッケージ生成が完了しました。処理を終了します。"

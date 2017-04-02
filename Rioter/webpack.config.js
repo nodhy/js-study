@@ -25,9 +25,11 @@ module.exports = [
       ],
     },
     resolve: {
+      // 読み込む際に拡張子を省略できるようにする
       extensions: ['', '.js', '.tag'],
     },
     plugins: [
+      // 指定した変数を他のモジュール内で使用できるようにする
       new webpack.ProvidePlugin({
         riot: 'riot',
       }),
