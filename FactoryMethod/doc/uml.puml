@@ -1,0 +1,30 @@
+@startuml
+
+class 工場 {
+  create()
+  createProduct()
+  registerProduct()
+}
+
+class ハンバーガー工場 {
+  names
+  createProduct()
+  registerProduct()
+  getNames()
+}
+
+class 商品 {
+  eat()
+}
+
+class ハンバーガー {
+  name
+  eat()
+  getName()
+}
+
+工場 <|-- ハンバーガー工場
+商品 <|-- ハンバーガー
+
+
+@enduml
