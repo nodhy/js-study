@@ -1,0 +1,29 @@
+{
+  "name": "HogeProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.22",
+    "@types/react-native": "^0.43.6",
+    "@types/react-redux": "^4.4.39",
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "16.0.0-alpha.6",
+    "typescript": "^2.2.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
